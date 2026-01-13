@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class ConfigController {
-
     
     @Value("${my.custom.property:Default Property Value}")
     private String customProperty;
