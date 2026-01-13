@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class ConfigController {
 
-    // Добавьте значения по умолчанию через двоеточие
+    
     @Value("${my.custom.property:Default Property Value}")
     private String customProperty;
 
