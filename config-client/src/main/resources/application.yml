@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: my-client-app
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: false  # Измените на false!
+
+# ЛОКАЛЬНЫЕ ЗНАЧЕНИЯ ПО УМОЛЧАНИЮ
+my:
+  custom:
+    property: "Local Default Property"
+    version: "0.0.0"
+
+custom:
+  message: "Local Default Message"
+
+# Для отладки
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+    org.springframework.boot.context.config: DEBUG
